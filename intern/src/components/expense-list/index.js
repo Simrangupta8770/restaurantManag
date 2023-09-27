@@ -8,7 +8,7 @@ const ExpenseList = () => {
 
   useEffect(() => {
     // Fetch the list of customers when the component mounts
-    axios.get('http://localhost:5000/api/v1/')
+    axios.get('https://restaurant-teac.onrender.com/api/v1/')
       .then(response => {
         setCustomerList(response.data.customers);
       })
@@ -17,8 +17,8 @@ const ExpenseList = () => {
       });
     // console.log(customerList.customers[0].name);
   }, []);
- 
- 
+
+
   var total = 0;
   // console.log(filteredList.then());
   const notifySuccess = () => toast.success("Expense Deleted!");
@@ -37,8 +37,8 @@ const ExpenseList = () => {
         ))
       ) : (
         <div className="empty-state">
-         
-          <label>Uh Oh! No customers.</label> 
+
+          <label>Uh Oh! No customers.</label>
         </div>
       )}
       {/* <div className="total">
